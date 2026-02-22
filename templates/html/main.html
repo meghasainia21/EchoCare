@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoCare</title>
+<link rel="stylesheet" href="/templates/css/hero.css">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #020617;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Particles Background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+    }
+
+    #element {
+      color: #3b82f6;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+    .cta-btn {
+     font-weight: bold;
+      margin-top: 40px;
+    
+      padding: 14px 36px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 999px;
+      background: #3884fe;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      
+      background: #2563eb;
+      transform: scale(1.06);
+    }
+    .main-footer{
+      color: white;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Particles -->
+  <div id="particles-js"></div>
+
+  <!-- Hero Content -->
+  <section class="hero">
+    <div>
+      <h1>
+        EchoCare <span id="element"></span>
+      </h1>
+      <p class="subtitle">
+        Secure patient records with intelligent voice-based access, built for doctors and patients
+      </p>
+      <a href="hero.html"><button class="cta-btn" onclick="goToHero()">
+        Get Started
+      </button></a>
+    
+    </div>
+   
+
+  </section>
+   
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    new Typed('#element', {
+      strings: [
+        '– Voice-Based Healthcare',
+        '– AI-Powered Assistance',
+        '– Care That Listens'
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 70,
+          density: { enable: true, value_area: 800 }
+        },
+        color: { value: "#3b82f6" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#3b82f6",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+<script>
+    function goToHero() {
+      document.getElementById('hero').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>

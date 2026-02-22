@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EchoCare Dashboard</title>
+<link rel="stylesheet" href="dash.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>EchoCare</h2>
+  <ul>
+    <li class="active" onclick="showSection('dashboard', this)">Dashboard</li>
+    <li onclick="showSection('patients', this)">Patients</li>
+    <li onclick="showSection('doctors', this)">Doctors</li>
+    <li onclick="showSection('appointments', this)">Appointments</li>
+    <li onclick="showSection('reports', this)">Reports</li>
+     <li onclick="showSection('reports', this)">Quick Help Nearby</li>
+    <li onclick="showSection('voiceai', this)">Voice Assistant</li>
+    <li class="logout" onclick="logout()">Logout</li>
+  </ul>
+</div>
+
+<div class="main">
+
+<div id="dashboard" class="section">
+
+  <div class="topbar">
+    <h1>Dashboard Analytics</h1>
+    <button class="btn" onclick="openModal()">+ Add Patient</button>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards">
+    <div class="card">Total Patients</span><br><span id="totalPatients">0</span></div>
+    <div class="card">High Risk Patients<br><span id="highRiskCount">0</span></div>
+    <div class="card">Normal<br><span id="normalCount">0</span></div>
+    <div class="card">Critical Alerts Today<br><span id="criticalcount">10</span></div>
+  </div>
+
+  <!-- TOP FILLED ANALYTICS -->
+  <div class="top-analytics">
+    <div class="progress-card">
+      Patients
+      <div class="progress-bar"><div id="patientsBar" class="progress-fill blue"></div></div>
+    </div>
+
+    <div class="progress-card">
+      High Risk
+      <div class="progress-bar"><div id="riskBar" class="progress-fill red"></div></div>
+    </div>
+
+    <div class="progress-card">
+      Reports
+      <div class="progress-bar"><div id="reportsBar" class="progress-fill green"></div></div>
+    </div>
+    <div class="progress-card">
+      Recovery Rate (%)
+      <div class="progress-bar"><div id="recoveryBar" class="progress-fill green"></div></div>
+    </div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="charts">
+    <div class="chart-box risk"><canvas id="riskChart"></canvas></div>
+    <div class="chart-box gender"><canvas id="genderChart"></canvas></div>
+   
+    <div class="chart-box age"><canvas id="ageChart"></canvas></div>
+    <div class="chart-box spec"><canvas id="specializationChart"></canvas></div>
+     <div class="chart-box trend"><canvas id="trendChart"></canvas></div>
+  </div>
+
+</div>
+
+<!-- PATIENT TABLE -->
+<div id="patients" class="section hidden">
+  <h1 class="patient-header">Patient Data</h1>
+  <input 
+    type="text" 
+    id="patientSearch" 
+    placeholder="Search patient..."
+    class="search-box"
+  >
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Specialization</th>
+        <th>Risk</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="patientTable"></tbody>
+  </table>
+</div>
+
+
+<div class="footer-quote">
+  <p id="healthQuote"></p>
+</div>
+
+<footer class="app-footer reveal-footer">
+  <p class="footer-line1">
+    © 2026 Megha. All rights reserved
+  </p>
+  <p class="footer-line2">
+    Crafted with ❤️ and care
+  </p>
+</footer>
+
+
+
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Add Patient</h2>
+
+    <input type="text" id="name" placeholder="Patient Name">
+    <input type="number" id="age" placeholder="Age">
+
+    <select id="gender">
+      <option value="">Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <select id="specialization">
+      <option value="">Select Medical Specialization</option>
+      <option>Cardiology (Heart Specialist)</option>
+  <option>Neurology (Brain & Nervous System)</option>
+  <option>Orthopedics (Bones & Joints)</option>
+  <option>ENT (Ear, Nose & Throat)</option>
+  <option>Gynecology (Women's Health)</option>
+  <option>Dermatology (Skin Specialist)</option>
+  <option>Pediatrics (Child Specialist)</option>
+  <option>General Physician (Primary Care)</option>
+  <option>Ophthalmology (Eye Specialist)</option>
+  <option>Psychiatry (Mental Health)</option>
+  <option>Gastroenterology (Digestive System)</option>
+  <option>Oncology (Cancer Specialist)</option>
+    </select>
+
+    <select id="risk">
+      <option value="">Select Health Risk</option>
+      <option>Normal Risk</option>
+  <option>High Blood Pressure (Hypertension)</option>
+  <option>Heart Disease Risk</option>
+  <option>Diabetes</option>
+  <option>Obesity</option>
+  <option>Respiratory Issues (Asthma / COPD)</option>
+  <option>Kidney Disease</option>
+  <option>Liver Disorder</option>
+  <option>Thyroid Disorder</option>
+  <option>High Cholesterol</option>
+    </select>
+
+    <div class="modal-buttons">
+      <button onclick="savePatient()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="dash.js"></script>
+
+
+
+</body>
+</html>

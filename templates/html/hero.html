@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoCare</title>
+  <link rel="stylesheet" href="/templates/css/hero.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+<body>
+
+<section class="hero-i">
+  <a href="voice.html"><button class="hero-btn"><i class="fa-solid fa-comment"></i> AI Assistant</button></a>
+  <!-- ECG Animated Background -->
+  <div class="ecg-container">
+    <svg class="ecg" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <polyline points="0,100 100,100 130,100 150,40 170,160 190,100 260,100 280,40 300,160 320,100 400,100 420,60 440,140 460,100 1200,100"/>
+    </svg>
+    <svg class="ecg second" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <polyline points="0,110 100,110 130,90 150,50 170,170 190,90 260,110 280,50 300,170 320,110 400,110 420,70 440,150 460,110 1200,110"/>
+    </svg>
+    <svg class="ecg third" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <polyline points="0,120 100,120 130,100 150,60 170,180 190,100 260,120 280,60 300,180 320,120 400,120 420,80 440,160 460,120 1200,120"/>
+    </svg>
+  </div>
+
+
+  <div class="hero-inner">
+   
+
+    <div class="hero-left">
+      <div class="hero-content">
+         
+        <h1 class="hero-title">Echocare</h1>
+       <h2>"Where technology meets compassionate care"</h2>
+        <p>Secure patient records with intelligent voice-based access, built for doctors and patients. Fast, private, and designed for seamless healthcare workflows.</p>
+
+        <div class="hero-buttons">
+          <a href="login.html" class="btn primary">Login</a>
+          <button class="btn secondary" onclick="openAuthCard()">Dashboard</button>
+        </div>
+      </div>
+     
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="hero-right">
+      <img src="/templates/pictures/heroimg.png" alt="Healthcare Illustration">
+    </div>
+    <!--below section-->
+   
+
+  </div>
+</section>
+
+<section class="features">
+  <h1 class="features-heading">Echocare at a Glance</h1>
+
+  <div class="features-container">
+    <div class="feature-box">
+      <i class="fa-solid fa-microphone"></i>
+      <h3>Voice-Based Access</h3>
+      <p>Access patient records instantly using secure voice commands.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-solid fa-lock"></i>
+      <h3>Data Security</h3>
+      <p>End-to-end encryption ensures complete privacy of medical data.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-solid fa-user-doctor"></i>
+      <h3>Doctor Friendly</h3>
+      <p>Simple and intuitive interface designed for healthcare professionals.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-regular fa-comment"></i>
+      <h3>24/7 AI Health Support</h3>
+      <p>Get instant health guidance and support anytime with our AI-powered assistant.</p>
+    </div>
+  </div>
+
+</section>
+<section class="experts">
+  <h1 class="experts-heading">Our Experts</h1>
+
+  <div class="experts-container">
+    <div class="expert-card">
+      <h3>Dr. Ananya Sharma</h3>
+      <span>Senior Cardiologist</span>
+      <p>
+        Echocare has transformed the way I access patient data. 
+        The voice-based system saves time and improves decision-making during critical cases.
+      </p>
+    </div>
+
+    <div class="expert-card">
+      <h3>Dr. Rohan Mehta</h3>
+      <span>General Physician</span>
+      <p>
+        The platform is intuitive and highly secure. 
+        Echocare makes patient record management seamless while ensuring data privacy.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="developer">
+  <div class="developer-wrapper">
+    <div class="developer-image">
+      <img src="/templates/pictures/developerimg.avif" alt="Echocare Developer Illustration">
+    </div>
+  <div class="developer-card">
+    <span class="dev-tag">Developed By</span>
+    <h2>Megha Sainia</h2>
+    <p>
+      Driven by the idea of simplifying healthcare through technology, 
+      I built Echocare to innovate secure, voice-powered access to medical data 
+      and create a more connected healthcare experience.
+    </p>
+  </div>
+</section>
+<section class="faq">
+  <h1 class="faq-heading">Frequently Asked Questions</h1>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Is Echocare secure for medical data?
+      <span class="arrow">▾</span>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Yes. Echocare uses end-to-end encryption and secure authentication
+        to ensure complete privacy and data protection.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How does voice-based access work?
+      <span class="arrow">▾</span>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Doctors and patients can access records using secure voice commands,
+        making the process fast, hands-free, and efficient.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can patients access their own records?
+      <span class="arrow">▾</span>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Absolutely. Echocare provides transparent and easy access for patients
+        to view their medical history anytime.
+      </p>
+    </div>
+  </div>
+ 
+
+<div class="faq-item">
+  <button class="faq-question">
+    Is Echocare suitable for hospitals and clinics?
+    <span class="arrow">▾</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      Absolutely. Echocare is scalable and can be used by individual doctors,
+      clinics, and large hospitals alike.
+    </p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">
+    How accurate is the AI assistance?
+    <span class="arrow">▾</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      Echocare’s AI provides guidance based on verified medical data and best
+      practices, assisting professionals without replacing clinical judgment.
+    </p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">
+    Can Echocare integrate with existing hospital systems?
+    <span class="arrow">▾</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      Yes, Echocare is built to integrate seamlessly with existing electronic
+      health record (EHR) systems via secure APIs.
+    </p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">
+    What happens if there is a system downtime?
+    <span class="arrow">▾</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      Echocare ensures high availability with secure backups and quick recovery
+      mechanisms to minimize disruptions.
+    </p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">
+    Is patient data shared with third parties?
+    <span class="arrow">▾</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      No. Patient data is never shared with third parties and is handled strictly
+      according to privacy and compliance standards.
+    </p>
+  </div>
+</div>
+
+</section>
+
+<section class="subscribe">
+  <h1 class="subscribe-heading">EchoCare</h1>
+ 
+  <p class="subscribe-text">
+    Subscribe for the latest updates, features, and health innovations.
+  </p>
+
+  <form class="subscribe-form">
+    <input type="email" placeholder="Enter your email address" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>Echocare</h2>
+      <p>
+        Innovating healthcare with secure, voice-powered and AI-driven solutions
+        for doctors and patients.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#experts">Our Experts</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-regular fa-envelope"></i> Email: support@echocare.com</p>
+      <p><i class="fa-solid fa-phone"></i> Phone: +91 8840849630</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Echocare. Developed by Megha Sainia.</p>
+  </div>
+</footer>
+
+
+
+<script>
+  document.querySelectorAll(".faq-question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      item.classList.toggle("active");
+    });
+  });
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <div id="auth-modal" class="auth-modal">
+  <div class="auth-card">
+    <i class="fa-solid fa-shield-halved"></i>
+    <h2>Sign in to view Dashboard</h2>
+    <p>
+      Login to access personalized patient data and secure records.
+    </p>
+
+    <div class="auth-actions">
+      <button class="login-btn" onclick="goToLogin()">Sign In</button>
+      <button class="guest-btn" onclick="stayLoggedOut()">Stay Logged Out</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openAuthCard() {
+    document.getElementById("auth-modal").classList.add("show");
+  }
+
+  function goToLogin() {
+    window.location.href = "login.html";
+  }
+
+  function stayLoggedOut() {
+    window.location.href = "dashboard.html";
+  }
+</script>
+
+
+
+</body>
+
+</body>
+</html>

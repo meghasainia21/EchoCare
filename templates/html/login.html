@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Echocare</title>
+    <link rel="stylesheet" href="/templates/css/login.css">
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+/* Center everything */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.login-btn{
+  font-size: 14.6px;
+}
+/* Login card */
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  background:rgba(255, 255, 255, 0.06);
+   border: 3px solid rgba(245, 236, 236, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(185, 208, 245, 0.15);
+}
+.login-container h2{
+  margin-top: 15px;
+}
+.login-container p{
+  margin-bottom: 10px;
+  color: rgb(245, 92, 92);
+  font-weight: 600;
+  font-size: 15px;
+  
+}
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Buttons */
+.login-btn,
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Google button alignment */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+    body {
+      background: #020617;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Particles Background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+</style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+  <!-- Hero Content -->
+  <section class="hero">
+    <div>
+      <div class="login-container">
+    <h2>Sign in to Echocare</h2>
+    <p>Welcome back! Please sign in to continue</p>
+
+    <button class="google-btn">
+      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google">
+      Continue with Google
+    </button>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <input type="email" placeholder="Email address">
+    <input type="password" placeholder="Password">
+
+    <button class="login-btn">Sign In</button>
+
+  
+  </div>
+
+    </div>
+  </section>
+   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+   <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 70,
+          density: { enable: true, value_area: 800 }
+        },
+        color: { value: "#3b82f6" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#3b82f6",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
