@@ -57,9 +57,10 @@ EchoCare simulates a smart healthcare monitoring system where medical staff can:
 ### Clone Repository
 
 git clone https://github.com/your-username/echocare.git
+<br>
 cd echocare
-
-npm install
+<br>
+npm install <br>
 npm start
 
 ## 📌 Project Highlights
